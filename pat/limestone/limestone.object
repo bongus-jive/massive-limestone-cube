@@ -1,0 +1,35 @@
+{
+  "objectName" : "pat_limestone",
+  "colonyTags" : ["misc"],
+  "rarity" : "essential",
+  "category" : "large",
+  "price" : 6,
+
+  "description" : "one of the 7 things you absolutely need to pack for college",
+  "shortdescription" : "massive limestone cube",
+  "race" : "generic",
+
+
+  "inventoryIcon" : "icon.png",
+  "orientations" : [
+    {
+      "image" : "limestone.png:<color>",
+      "imagePosition" : [-24, 0],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "limestone.png:<color>",
+      "imagePosition" : [-24, 0],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ]
+}
