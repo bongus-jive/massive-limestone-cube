@@ -1,7 +1,0 @@
-[
-  {
-    "op": "replace",
-    "path": "/layers/5/objects/2/properties/parameters",
-    "value": "{ \"initialItems\" : [ { \"name\" : \"protectoratechest\", \"count\" : 1 }, { \"name\" : \"protectoratepants\", \"count\" : 1 },  { \"name\" : \"money\", \"count\" : 20 }, { \"name\" : \"protectorateflyer\", \"count\" : 1 }, { \"name\" : \"pat_limestone\", \"count\" : 1 } ] }"
-  }
-]
