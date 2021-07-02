@@ -14,6 +14,10 @@ function update(...)
 	
 	if not storage.limestone and protectorate then
 		storage.limestone = true
-		world.containerAddItems(entity.id(), {name = "pat_limestone"})
+		
+		local h = world.containerAddItems(entity.id(), {name = "pat_limestone"})
+		if h then
+			world.spawnItem(h, entity.position())
+		end
 	end
 end
