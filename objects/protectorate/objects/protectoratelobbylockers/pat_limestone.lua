@@ -1,21 +1,20 @@
-local oldInit = init or function() end
-local oldUpdate = update or function() end
+local oldInit = init
+local oldUpdate = update
 
 local protectorate
 
 function init()
-	oldInit()
-	
+	if oldInit then oldInit() end
 	protectorate = world.type() == "protectorate"
 end
 
 function update(...)
-	oldUpdate(...)
+	if oldUpdate then oldUpdate(...) end
 	
-	if not storage.limestone and protectorate then
+	if protectorate and not storage.limestone then
 		storage.limestone = true
 		
-		local h = world.containerAddItems(entity.id(), {name = "pat_limestone"})
+		local h = world.containerAddItems(entity.id(), "pat_limestone")
 		if h then
 			world.spawnItem(h, entity.position())
 		end
