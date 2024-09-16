@@ -1,22 +1,14 @@
-local oldInit = init
-local oldUpdate = update
+local _containerCallback = containerCallback
+function containerCallback()
+	if _containerCallback then _containerCallback() end
 
-local protectorate
+	if storage.pat_limestone then return end
+	storage.pat_limestone = true
 
-function init()
-	if oldInit then oldInit() end
-	protectorate = world.type() == "protectorate"
-end
+	if world.type() ~= "protectorate" then return end
 
-function update(...)
-	if oldUpdate then oldUpdate(...) end
-	
-	if protectorate and not storage.limestone then
-		storage.limestone = true
-		
-		local h = world.containerAddItems(entity.id(), "pat_limestone")
-		if h then
-			world.spawnItem(h, entity.position())
-		end
+	local leftover = world.containerAddItems(entity.id(), "pat_limestone")
+	if leftover then
+		world.spawnItem(leftover, entity.position())
 	end
 end
