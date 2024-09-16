@@ -12,21 +12,8 @@
   "inventoryIcon": "icon.png",
   "orientations": [
     {
-      "image": "limestone.png:<color>",
+      "dualImage": "limestone.png:<color>",
       "imagePosition": [ -24, 0 ],
-
-      "direction": "left",
-      "flipImages": true,
-
-      "spaceScan": 0.1,
-      "anchors": [ "bottom" ]
-    },
-    {
-      "image": "limestone.png:<color>",
-      "imagePosition": [ -24, 0 ],
-
-      "direction": "right",
-
       "spaceScan": 0.1,
       "anchors": [ "bottom" ]
     }
