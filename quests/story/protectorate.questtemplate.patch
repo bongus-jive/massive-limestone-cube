@@ -1,0 +1,3 @@
+[
+  { "op": "add", "path": "/scriptConfig/confiscateItems/-", "value": [ "pat_limestone", 69420 ] }
+]
